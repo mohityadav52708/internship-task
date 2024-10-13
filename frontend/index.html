@@ -1,0 +1,50 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webtoon Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webtoon Manager</h1>
+
+        <div id="auth-section">
+            <h2>Authentication</h2>
+            <div id="register-form">
+                <h3>Register</h3>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="register()">Register</button>
+            </div>
+
+            <div id="login-form">
+                <h3>Login</h3>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <div id="webtoons-section">
+            <h2>All Webtoons</h2>
+            <button onclick="fetchWebtoons()">Refresh List</button>
+            <ul id="webtoons-list"></ul>
+        </div>
+
+        <div id="add-webtoon-section">
+            <h2>Add New Webtoon</h2>
+            <input type="text" id="webtoon-title" placeholder="Title">
+            <textarea id="webtoon-description" placeholder="Description"></textarea>
+            <textarea id="webtoon-characters" placeholder="Characters (comma separated)"></textarea>
+            <button onclick="addWebtoon()">Add Webtoon</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
