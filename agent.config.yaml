@@ -1,0 +1,11 @@
+permissions:
+  default_allow: false
+  allowed_actions:
+    - web.open_url
+    - web.search_web
+    - code.create_file
+    - code.write_file
+    - code.append_to_file
+    - system.list_directory
+openai:
+  model: gpt-4o-mini
